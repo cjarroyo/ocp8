@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cebd6e2-91bf-47f6-a12f-6f870b337597" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/A_AccessModifiers.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/BigCat.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/CatAdmirer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/species/Lynx.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/mouse/Mouse.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,17 +27,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="A_UnderstandingJavaOperators.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/A_UnderstandingJavaOperators.java">
+      <file leaf-file-name="A_AccessModifiers.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/A_AccessModifiers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="216">
+              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigCat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/BigCat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lynx.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/species/Lynx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CatAdmirer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/CatAdmirer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mouse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/mouse/Mouse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -334,6 +384,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/A_UnderstandingJavaOperators.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/BigCat.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/others/BigCat.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/BigCat.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/species/Lynx.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/A_AccessModifiers.java" />
       </list>
     </option>
   </component>
@@ -476,7 +531,7 @@
     <configuration name="A_UnderstandingJavaOperators.operator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ch1.advanced_class_design.A_reviewing_oca_concepts.*" />
+          <option name="PATTERN" value="ch1.advanced_class_design.A_reviewing_oca_concepts.cat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -579,8 +634,16 @@
       <updated>1554696292825</updated>
       <workItem from="1554696298633" duration="74000" />
       <workItem from="1554927362222" duration="2354000" />
-      <workItem from="1554930191939" duration="134000" />
+      <workItem from="1554930191939" duration="520000" />
     </task>
+    <task id="LOCAL-00001" summary="configuratinons file">
+      <created>1554930356316</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554930356316</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -592,7 +655,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2562000" />
+    <option name="totallyTimeSpent" value="2948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="701" y="0" width="1219" height="1040" extended-state="0" />
@@ -634,6 +697,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="configuratinons file" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuratinons file" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -643,6 +710,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/species/Lunx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/species/Lynx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/CatAdmirer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/mouse/Mouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/cat/BigCat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch1/advanced_class_design/A_reviewing_oca_concepts/A_AccessModifiers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding />
         </state>
       </provider>
