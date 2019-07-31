@@ -218,3 +218,86 @@ which marks the program encountering the end of the file. Notice that we don’t
 with the exception other than finish the method. This is one of the few times when it
 is perfectly acceptable to swallow an exception.
  */
+
+/**********EOF Check Methods
+ * =====================
+
+ You may come across code that reads from an InputStream and uses the snippet
+ while(in.available()>0) to check for the end of the stream, rather than checking for an
+ EOFException.
+ The problem with this technique, and the Javadoc does echo this, is that it only tells you the
+ number of blocks that can be read without blocking the next caller. In other words, it can
+ return 0 even if there are more bytes to be read. Therefore, the InputStream available()
+ method should never be used to check for the end of the stream.
+ */
+
+/*
+We conclude our discussion of the Object stream classes by noting that they do support
+reading and writing null objects. Therefore, it is important to check for null values when
+reading from a serialized data stream. In our sample application, we rely on the property of
+the instanceof operator always to return false for null values to skip explicitly needing
+to check for null values.
+ */
+
+/*
+
+public void Understanding Object Creation(){
+
+For the exam, you need be aware of how a deserialized object is created. When you deserialize
+an object, the constructor of the serialized class is not called. In fact, Java calls the first
+no-arg constructor for the first nonserializable parent class, skipping the constructors of
+any serialized class in between. Furthermore, any static variables or default initializations
+are ignored.
+Let’s take a look at a modified version the Animal class and see how the output of the
+ObjectStreamSample program would change with some modifications to our attributes and
+add a new constructor:
+
+
+
+}
+
+ */
+
+class Animal2 implements Serializable {
+    private static final long serialVersionUID = 2L;
+    private transient String name;
+    private transient int age = 10;
+    private static char type = 'C';
+
+    {
+        this.age = 14;
+    }
+
+    public Animal2() {
+        this.name = "Unknown";
+        this.age = 12;
+        this.type = 'Q';
+    }
+
+    public Animal2(String name, int age, char type) {
+        this.name = name;
+        this.age = age;
+        this.type = type;
+    }
+
+    // Same methods as before
+
+}
+
+/*
+As we said earlier, transient means the value won’t be included in the serialization
+process, so it’s safe to assume name and age will be left out of the serialized file. More
+interestingly, the values of age being set to 10, 12, or 14 in the class are all ignored when
+the object is deserialized, as no class constructor or default initializations are used. The
+following is the output of the ObjectStreamSample program with the new Animal class
+definition:
+[Animal [name=null, age=0, type=P], Animal [name=null, age=0, type=P]]
+As expected, you can see that the values for name and age are lost on serialization and
+not set again during deserialization. The JVM initializes these variables with the default
+values based on the data types String and int, which are null and 0, respectively. Since
+the type variable is static, it is not serialized to disk. The sample program displays a value
+for type, as the variable is shared by all instances of the class and is the last value in our
+sample program.
+For the exam, make sure that you understand that the constructor and any default
+initializations are ignored during the deserialization process.
+ */
