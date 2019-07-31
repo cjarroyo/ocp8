@@ -1,36 +1,25 @@
-package ch8.io.C_working_with_streams.D_the_PrintStream_and_PrintWriter_Classes;
+package ch8.io.C_working_with_streams.D_the_printStream_and_printWriter_classes;
 
 import org.junit.Test;
 
 public class A_the_PrintStream_and_PrintWriter_Classes {
     /*
-    The PrintStream and PrintWriter classes are high-level stream classes that write
-formatted representation of Java objects to a text-based output stream. As you may have
-ascertained by the name, the PrintStream class operates on OutputStream instances and
-writes data as bytes, whereas the PrintWriter class operates on Writer instances and
-writes data as characters.
-For convenience, both of these classes include constructors that can open and write
-to files directly. Furthermore, the PrintWriter class even has a constructor that takes an
-OutputStream as input, allowing you to wrap a PrintWriter class around an OutputStream.
+    The PrintStream and PrintWriter classes are high-level stream classes that write formatted representation of Java objects to a text-based output stream.
+    As you may have ascertained by the name, the PrintStream class operates on OutputStream instances and writes data as bytes, whereas the PrintWriter class operates on Writer instances and writes data as characters.
+    For convenience, both of these classes include constructors that can open and write to files directly.
+    Furthermore, the PrintWriter class even has a constructor that takes an OutputStream as input, allowing you to wrap a PrintWriter class around an OutputStream.
 
-These classes are primarily convenience classes in that you could write the low-level
-primitive or object directly to a stream without a PrintStream or PrintWriter class,
-although using one is helpful in a wide variety of situations.
-In fact, the primary method class we have been using to output information to screen
-throughout this book uses a PrintStream object! For the exam, you should be aware that
-System.out and System.err are actually PrintStream objects.
-Because PrintStream inherits OutputStream and PrintWriter inherits from Writer ,
-both support the underlying write() method while providing a slew of print-based
-methods. For the exam, you should be familiar with the print() , println() , format() ,
-and printf() methods. Unlike the underlying write() method, which throws a checked
-IOException that must be caught in your application, these print-based methods do
-not throw any checked exceptions. If they did, you would have been required to catch a
-checked exception anytime you called System.out.println() in your code! Both classes
-provide a method, checkError() , that can be used to detect the presence of a problem after
-attempting to write data to the stream.
-For the rest of this section, we will use PrintWriter in our examples, as writing String
-data as characters instead of byte values is recommended. Keep in mind that the same
-examples could be easily rewritten with a PrintStream object.
+    These classes are primarily convenience classes in that you could write the low-level primitive or object directly to a stream without a PrintStream or PrintWriter class,
+    although using one is helpful in a wide variety of situations.
+    In fact, the primary method class we have been using to output information to screen throughout this book uses a PrintStream object! For the exam, you should be aware that
+    System.out and System.err are actually PrintStream objects.
+    Because PrintStream inherits OutputStream and PrintWriter inherits from Writer , both support the underlying write() method while providing a slew of print-based methods.
+    For the exam, you should be familiar with the print() , println() , format() , and printf() methods.
+    Unlike the underlying write() method, which throws a checked IOException that must be caught in your application, these print-based methods do not throw any checked exceptions.
+    If they did, you would have been required to catch a checked exception anytime you called System.out.println() in your code! Both classes provide a method, checkError() , that can be used to detect the presence of a problem after
+    attempting to write data to the stream.
+    For the rest of this section, we will use PrintWriter in our examples, as writing String data as characters instead of byte values is recommended.
+    Keep in mind that the same examples could be easily rewritten with a PrintStream object.
      */
 
     /************
