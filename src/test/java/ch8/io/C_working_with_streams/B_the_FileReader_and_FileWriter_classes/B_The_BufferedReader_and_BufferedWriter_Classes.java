@@ -1,4 +1,4 @@
-package ch8.io.C_working_with_streams.B_the_FileReader_and_FileWriter_classes;
+package ch8.io.C_working_with_streams.B_the_fileReader_and_fileWriter_classes;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,40 +9,39 @@ public class B_The_BufferedReader_and_BufferedWriter_Classes {
     Let’s take a look at a sample program that makes use of both the BufferedReader and BufferedWriter classes using the associated readLine() and write(String) methods.
     It reads a text file, outputs each line to screen, and writes a copy of the file to disk. Since these classes are buffered, you can expect better performance than if you read/wrote each character one at a time.
      */
+}
 
-    static class CopyTextFileSample {
-        public static List<String> readFile(File source) throws IOException {
-            List<String> data = new ArrayList<String>();
-            try (BufferedReader reader = new BufferedReader(new FileReader(source))) {
-                String s;
-                while ((s = reader.readLine()) != null) {
-                    data.add(s);
-                }
-            }
-            return data;
-        }
-
-        public static void writeFile(List<String> data, File destination) throws
-                IOException {
-            try (BufferedWriter writer = new BufferedWriter(
-                    new FileWriter(destination))) {
-                for (String s : data) {
-                    writer.write(s);
-                    writer.newLine();
-                }
+class CopyTextFileSample {
+    public static List<String> readFile(File source) throws IOException {
+        List<String> data = new ArrayList<String>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(source))) {
+            String s;
+            while ((s = reader.readLine()) != null) {
+                data.add(s);
             }
         }
+        return data;
+    }
 
-        public static void main(String[] args) throws IOException {
-            File source = new File("Zoo.csv");
-            File destination = new File("ZooCopy.csv");
-            List<String> data = readFile(source);
-            for (String record : data) {
-                System.out.println(record);
+    public static void writeFile(List<String> data, File destination) throws  IOException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(destination))) {
+            for (String s : data) {
+                writer.write(s);
+                writer.newLine();
             }
-            writeFile(data, destination);
         }
     }
+
+    public static void main(String[] args) throws IOException {
+        File source = new File("Zoo.csv");
+        File destination = new File("ZooCopy.csv");
+        List<String> data = readFile(source);
+        for (String record : data) {
+            System.out.println(record);
+        }
+        writeFile(data, destination);
+    }
+}
 
     /*
     This example is similar to the file copy example that you saw previously, with some important differences. First, in the readFile() method, we use a temporary String
@@ -77,18 +76,17 @@ public class B_The_BufferedReader_and_BufferedWriter_Classes {
     Although this may sound simple, Java supports a wide variety of character encodings, ranging from ones that may use one byte for Latin characters, UTF-8 and ASCII for example, to using two or more bytes per character, such as UTF-16 .
     For the exam, you don’t need to memorize the character encodings, but you should be familiar with the names if you come across them on the exam.
      */
-    /**Character encoding in Java
-     * =============================
-     In Java, the character encoding can be specifi ed using the Charset class by passing a
-     name value to the static Charset.forName() method, such as in the following examples:
-     Charset usAsciiCharset = Charset.forName("US-ASCII");
-     Charset utf8Charset = Charset.forName("UTF-8");
-     Charset utf16Charset = Charset.forName("UTF-16");
-     Java supports numerous
-     */
+/**Character encoding in Java
+ * =============================
+ In Java, the character encoding can be specifi ed using the Charset class by passing a
+ name value to the static Charset.forName() method, such as in the following examples:
+ Charset usAsciiCharset = Charset.forName("US-ASCII");
+ Charset utf8Charset = Charset.forName("UTF-8");
+ Charset utf16Charset = Charset.forName("UTF-16");
+ Java supports numerous
+ */
 
     /*
     The key point here is that although you can use InputStream / OutputStream instead of Reader / Writer to read and write text fi les, it is inappropriate to do so.
     Recall that the character stream classes were created for convenience, and you should certainly take advantage of them when working with text data.
      */
-}

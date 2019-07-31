@@ -1,4 +1,4 @@
-package ch8.io.C_working_with_streams.A_the_FileInputStream_and_FileOutputStream_Classes;
+package ch8.io.C_working_with_streams.A_the_fileInputStream_and_fileOutputStream_classes;
 
 import java.io.*;
 
@@ -74,27 +74,26 @@ class CopyFileSample {
 
      */
 
-    /***
-     Why Use the Buffered Classes?
-     ==============================
-     Although we could have rewritten our earlier examples to use byte arrays without introducing the Buffered classes, we chose to present them together.
-     In practice, it’s quite common to use Buffered classes anytime you are reading or writing data with byte arrays. The Buffered classes contain numerous performance enhancements for managing stream data in memory.
+/***
+ Why Use the Buffered Classes?
+ ==============================
+ Although we could have rewritten our earlier examples to use byte arrays without introducing the Buffered classes, we chose to present them together.
+ In practice, it’s quite common to use Buffered classes anytime you are reading or writing data with byte arrays. The Buffered classes contain numerous performance enhancements for managing stream data in memory.
 
-     For example, the BufferedInputStream class is capable of retrieving and storing in memory more data than you might request with a single read() call.
-     For successive calls to the read() method with small byte arrays, this would be faster in a wide variety of situations, since the data can be returned directly from memory without going to the file system.
+ For example, the BufferedInputStream class is capable of retrieving and storing in memory more data than you might request with a single read() call.
+ For successive calls to the read() method with small byte arrays, this would be faster in a wide variety of situations, since the data can be returned directly from memory without going to the file system.
 
-     */
+ */
 
     /*
     Here’s a modified form of our copy() method, which uses byte arrays and the Buffered stream classes:
      */
 
 class CopyBufferFileSample {
+
     public static void copy(File source, File destination) throws IOException {
-        try (
-                InputStream in = new BufferedInputStream(new FileInputStream(source));
-                OutputStream out = new BufferedOutputStream(
-                        new FileOutputStream(destination))) {
+        try (InputStream in = new BufferedInputStream(new FileInputStream(source));
+             OutputStream out = new BufferedOutputStream(new FileOutputStream(destination))) {
             byte[] buffer = new byte[1024];
             int lengthRead;
             while ((lengthRead = in.read(buffer)) > 0) {
@@ -102,6 +101,13 @@ class CopyBufferFileSample {
                 out.flush();
             }
         }
+
+    }
+
+    public static void main(String[] args) throws IOException {
+        File source = new File("Zoo.class");
+        File destination = new File("ZooCopy.class");
+        copy(source, destination);
     }
 }
 
@@ -109,15 +115,15 @@ class CopyBufferFileSample {
     You can see that this sample code that uses byte arrays is very similar to the nonbuffered sample code, although the performance improvement for using both the Buffered classes and byte arrays is an order of magnitude faster in practice.
     We also added a flush() command in the loop, as previously discussed, to ensure that the written data actually makes it to disk before the next buffer of data is read.
      */
-    /****
-     Buffer Size Tuning
-     ==================
-     We chose a buffer size of 1024 in this example, as this is appropriate for a wide variety of circumstances, although in practice you may see better performance with a larger or smaller buffer size.
-     This would depend on a number of factors including file system block size and CPU hardware.
+/****
+ Buffer Size Tuning
+ ==================
+ We chose a buffer size of 1024 in this example, as this is appropriate for a wide variety of circumstances, although in practice you may see better performance with a larger or smaller buffer size.
+ This would depend on a number of factors including file system block size and CPU hardware.
 
-     It is also common to choose a power of 2 for the buffer size, since most underlying hardware is structured with file block and cache sizes that are a power of 2.
-     The Buffered classes allow you to specify the buffer size in the constructor. If none is provided, they use a default value, which is a power of 2 in most JVMs.
+ It is also common to choose a power of 2 for the buffer size, since most underlying hardware is structured with file block and cache sizes that are a power of 2.
+ The Buffered classes allow you to specify the buffer size in the constructor. If none is provided, they use a default value, which is a power of 2 in most JVMs.
 
-     Regardless of which buffer size you choose, the biggest performance increase you will see is moving from nonbuffered to buffered file access.
-     Adjusting the buffer size may improve performance slightly, but unless you are using an extremely small or extremely large buffer size, it is unlikely to have a significant impact.
-     */
+ Regardless of which buffer size you choose, the biggest performance increase you will see is moving from nonbuffered to buffered file access.
+ Adjusting the buffer size may improve performance slightly, but unless you are using an extremely small or extremely large buffer size, it is unlikely to have a significant impact.
+ */

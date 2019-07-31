@@ -1,4 +1,4 @@
-package ch8.io.C_working_with_streams.B_the_FileReader_and_FileWriter_classes;
+package ch8.io.C_working_with_streams.B_the_fileReader_and_fileWriter_classes;
 
 public class A_the_FileReader_and_FileWriter_classes {
     /*
